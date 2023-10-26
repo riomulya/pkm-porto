@@ -1,0 +1,671 @@
+/* Defining custom colors using HSL color model */
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 80%);
+  --grey-blue: hsl(217, 28%, 15%);
+  --dark-blue: hsl(218, 28%, 13%);
+  --very-dark-blue: hsl(216, 53%, 9%);
+  --cyan-blue: hsl(176, 68%, 64%);
+  --dark-cyan-blue: hsl(198, 60%, 50%);
+  --dark-grey-blue: hsl(219, 30%, 18%);
+}
+
+/* Global box-sizing property to all elements, 
+   margin & padding set to 0 to avoid unwanted spacing */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--dark-blue);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--clr-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  background: linear-gradient(45deg, var(--cyan-blue), var(--dark-cyan-blue));
+  color: var(--clr-white);
+  font-weight: 700;
+  padding: 1em 5em;
+  border: none;
+  border-radius: 2.5em;
+}
+
+.btn:hover {
+  background: hsl(198, 70%, 54%);
+}
+
+/*********** Typography  *********/
+
+h1,
+h2,
+.nav-list,
+.btn {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 1em 0em;
+}
+
+h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--clr-grey);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*********** Navigation Bar  *********/
+
+nav {
+  background-color: var(--grey-blue);
+  padding: 2.5em;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  width: 5em;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--clr-grey);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.2em;
+  background: var(--clr-grey);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.sub-heading {
+  font-size: 0.9rem;
+  margin: 0.5em;
+  padding-bottom: 2.5em;
+}
+
+/*********** Secure Location *********/
+
+.sl {
+  position: relative;
+  background: url('./images/bg-curvy-mobile.svg') no-repeat left top,
+    linear-gradient(var(--grey-blue) 50%, var(--dark-blue) 50%);
+  background-size: 145%;
+  background-position: -8em center;
+  background-repeat: no-repeat;
+  padding: 0em 2em;
+}
+
+.sl-image img {
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*********** Features *********/
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7em 2em 0em;
+}
+
+.features_sub-heading {
+  padding: 0.5em 0.3em;
+  font-size: 0.8rem;
+}
+
+.features-info {
+  padding-top: 1.3em;
+}
+
+.icon img {
+  border-radius: 5%;
+  width: 30em;
+  height: 30em;
+}
+
+/*********** Productivity *********/
+
+.productivity {
+  padding: 7em 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.productivity-info {
+  padding-top: 1.5em;
+  text-align: left;
+}
+
+.productivity-info h2 {
+  font-size: 1.1rem;
+}
+
+.productivity_sub-heading_1 {
+  padding: 1em 0em;
+  font-size: 0.9em;
+}
+
+.productivity_sub-heading_2 {
+  font-size: 0.9em;
+  padding-bottom: 1em;
+}
+
+.productivity-link {
+  color: #4cc6d3;
+  border-bottom: 0.1em solid #4cc6d3;
+  padding-bottom: 0.4em;
+  padding-right: 2em;
+  background: url('./images/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.productivity-link:hover {
+  color: var(--clr-white);
+  border-bottom: 0.1em solid var(--clr-white);
+  background: url('./images/icon-arrow-hover.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.pro-arrow {
+  top: 10em;
+}
+
+/*********** Team *********/
+.team {
+  display: flex;
+  flex-direction: column;
+  background-image: url(./images/bg-quotes.png);
+  background-repeat: no-repeat;
+  padding-top: 0.1em;
+  background-position: left 1.9em top;
+  background-size: 10%;
+  margin-bottom: -10em;
+}
+
+.quote-box {
+  background-color: var(--dark-grey-blue);
+  box-shadow: 0 0 10px 5px hsla(0, 0%, 22%, 0.09);
+  margin: 2em;
+  padding: 2.5em 2em;
+  border-radius: 0.3em;
+}
+
+.quote-txt {
+  text-align: left;
+  font-size: 0.85em;
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-top: 1em;
+}
+
+.author-img {
+  width: 10%;
+  height: 10%;
+  border-radius: 5em;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5em;
+}
+
+.author-name {
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.author-title {
+  text-align: left;
+  font-size: 0.5em;
+}
+
+/*********** Sign-Up Form *********/
+.signup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  bottom: -15rem;
+  margin: 2em 1em;
+  padding: 4em 1.5em 2.5em;
+  background-color: var(--grey-blue);
+  border-radius: 1em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25),
+    4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.signup-info {
+  margin-bottom: 2em;
+}
+
+.signup-info h1 {
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
+
+.signup-info p {
+  font-size: 0.9em;
+}
+
+#email-input {
+  height: 4.5em;
+  width: 21.55em;
+  border: none;
+  border-radius: 2em;
+  margin-bottom: 2em;
+  justify-content: center;
+  padding-left: 2.5em;
+}
+
+#email-input::placeholder {
+  color: #979797;
+  opacity: 0.7;
+}
+
+#email-input input::placeholder {
+  color: #000000;
+}
+
+#email-input:focus::placeholder {
+  color: transparent;
+}
+
+.signup-form .btn {
+  padding: 1.5em 5em;
+  border-radius: 2em;
+  font-size: 1.05em;
+}
+
+#validation-message {
+  font-size: 1.1em;
+  margin: 1.5em 2em 0em 1em;
+}
+/*********** Footer *********/
+footer {
+  background-color: var(--very-dark-blue);
+  padding: 21em 2.5em 2.5em;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 12em;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-flex a {
+  color: var(--clr-white);
+}
+
+/* Company Location */
+.company-location {
+  margin-top: 2em;
+}
+
+.location-logo {
+  margin-right: 2.5em;
+  margin-top: 0.5em;
+}
+
+.company-location p {
+  display: flex;
+  font-size: 1em;
+}
+
+/* Company Contacts */
+.company-contact {
+  margin-bottom: 1em;
+}
+.company-meta {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.phone-logo {
+  margin-right: 1.5em;
+}
+
+.email-logo {
+  margin-right: 1.5em;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Company Links */
+.company-links {
+  margin-top: 2em;
+  line-height: 2.5em;
+}
+
+.company-links a:hover {
+  text-decoration: underline;
+}
+
+/* Company Social */
+.company-social {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.social-logo {
+  display: inline-flex;
+  height: 2em;
+  width: 2em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--clr-white);
+  margin-left: 0.5em;
+}
+
+.social-logo:hover {
+  color: var(--cyan-blue);
+  border: 1px solid var(--cyan-blue);
+}
+
+/* Attribution */
+.attribution {
+  margin: 5em 2em 0em;
+  width: 80%;
+  font-weight: 700;
+  text-align: center;
+  color: var(--clr-white);
+}
+.attribution a {
+  color: var(--cyan-blue);
+  text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*********** Media Queries  *********/
+
+@media (min-width: 62.5em) {
+  /*********** Typography  *********/
+  h1.heading {
+    font-size: 2rem;
+    margin: 1em 10em;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  /*********** Navigation Bar  *********/
+  nav {
+    padding: 4em 5em;
+  }
+
+  .logo {
+    width: 15em;
+  }
+
+  .nav-list {
+    gap: 3em;
+  }
+
+  .sub-heading {
+    font-size: 1.1rem;
+    margin: 0em 20em;
+  }
+
+  /*********** Secure Location *********/
+  .sl {
+    position: relative;
+    background: url('./images/bg-curvy-mobile.svg') no-repeat left top,
+      linear-gradient(var(--grey-blue) 90%, var(--dark-blue) 10%);
+    background-size: 120%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 7em;
+  }
+
+  /*********** Features *********/
+
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 0em 9em;
+  }
+
+  .flex {
+    flex: 50%;
+    padding: 3em 0em;
+    align-items: center;
+  }
+
+  .features_sub-heading {
+    font-size: 0.9rem;
+    margin: 0em 7em;
+  }
+
+  /*********** Productivity *********/
+
+  .productivity {
+    padding: 7em 0em;
+    margin: 0em 5em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productivity-image {
+    width: 80%;
+  }
+  .productivity-info {
+    margin: 0em 6em 0em 2em;
+  }
+
+  .productivity-info h2 {
+    font-size: 2rem;
+    margin-right: 4em;
+  }
+
+  .productivity_sub-heading_1 {
+    font-size: 1em;
+  }
+
+  .productivity_sub-heading_2 {
+    font-size: 1em;
+  }
+
+  /*********** Team *********/
+  .team {
+    flex-direction: row;
+    padding: 1.5em 3em 0em;
+    background-position: left 3em top;
+    background-size: auto;
+    margin-bottom: 2em;
+  }
+
+  .quote-txt {
+    font-size: 1em;
+  }
+
+  /*********** Sign-Up Form *********/
+  .signup {
+    margin: 1em 18em;
+    padding: 3em 2em 1em;
+    bottom: -7rem;
+  }
+
+  .signup-info h1 {
+    font-size: 2em;
+  }
+
+  .signup-info p {
+    margin: 0em 4em;
+  }
+
+  #email-input {
+    height: 3em;
+    width: 32em;
+  }
+
+  #email-validation {
+    display: none;
+  }
+
+  .signup-form .btn {
+    margin-left: 2em;
+    padding: 1em 2em;
+    font-size: 0.9em;
+  }
+
+  #validation-message {
+    font-size: 1em;
+    text-align: left;
+    margin: 0em 8em 0em 4em;
+  }
+
+  /*********** Footer *********/
+  footer {
+    padding: 10em 4em 4em;
+  }
+
+  .footer-logo {
+    width: 8em;
+  }
+
+  .footer-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 2em;
+  }
+
+  /* Company Location */
+  .company-location {
+    margin-top: 0em;
+  }
+
+  .company-location p {
+    width: 23em;
+    font-size: 1em;
+  }
+
+  /* Company Contact */
+  .company-contact {
+    margin-bottom: 0em;
+  }
+
+  .company-meta {
+    margin-top: 0em;
+  }
+
+  .company-meta:nth-child(2) {
+    line-height: 4em;
+  }
+
+  /* Company Links */
+  .company-links {
+    margin-top: 0em;
+  }
+
+  .company-links li:first-child {
+    line-height: 1em;
+    padding-bottom: 0.6em;
+  }
+
+  /* Company Social */
+  .company-social {
+    margin-top: 0em;
+  }
+
+  /* Attribution */
+  .attribution {
+    width: auto;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+    width: 0.625rem;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.44, hsl(206, 50%, 30%)),
+      color-stop(0.72, hsl(218, 28%, 20%)),
+      color-stop(0.86, hsl(219, 60%, 20%))
+    );
+  }
+}
