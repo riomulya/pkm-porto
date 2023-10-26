@@ -142,6 +142,7 @@ nav {
 
 .sl-image img {
   border-radius: 100%;
+  position: relative;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -166,8 +167,8 @@ nav {
 
 .icon img {
   border-radius: 5%;
-  width: 30em;
-  height: 30em;
+  width: 35em;
+  height: 25em;
 }
 
 /*********** Productivity *********/
@@ -274,8 +275,8 @@ nav {
   font-size: 0.5em;
 }
 
-/*********** Sign-Up Form *********/
-.signup {
+/*********** Contact Form *********/
+.contact {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -289,16 +290,16 @@ nav {
     4px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
-.signup-info {
+.contact-info {
   margin-bottom: 2em;
 }
 
-.signup-info h1 {
+.contact-info h1 {
   margin-bottom: 1em;
   font-size: 1.4em;
 }
 
-.signup-info p {
+.contact-info p {
   font-size: 0.9em;
 }
 
@@ -325,7 +326,7 @@ nav {
   color: transparent;
 }
 
-.signup-form .btn {
+.contact-form .btn {
   padding: 1.5em 5em;
   border-radius: 2em;
   font-size: 1.05em;
@@ -550,17 +551,17 @@ footer {
   }
 
   /*********** Sign-Up Form *********/
-  .signup {
+  .contact {
     margin: 1em 18em;
     padding: 3em 2em 1em;
     bottom: -7rem;
   }
 
-  .signup-info h1 {
+  .contact-info h1 {
     font-size: 2em;
   }
 
-  .signup-info p {
+  .contact-info p {
     margin: 0em 4em;
   }
 
@@ -573,7 +574,7 @@ footer {
     display: none;
   }
 
-  .signup-form .btn {
+  .contact-form .btn {
     margin-left: 2em;
     padding: 1em 2em;
     font-size: 0.9em;
