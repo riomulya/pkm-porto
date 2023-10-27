@@ -130,7 +130,7 @@ nav {
 
 /*********** Secure Location *********/
 
-.sl {
+.hero {
   position: relative;
   background: url('./assets/images/background/bg-curvy-desktop.svg') no-repeat
       left top,
@@ -141,7 +141,7 @@ nav {
   padding: 0em 2em;
 }
 
-.sl-image img {
+.hero-image img {
   border-radius: 100%;
   position: relative;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
@@ -223,8 +223,8 @@ nav {
   top: 10em;
 }
 
-/*********** Team *********/
-.team {
+/*********** client *********/
+.client {
   display: flex;
   flex-direction: column;
   background-image: url(./assets/images/background/bg-quotes.png);
@@ -478,8 +478,8 @@ footer {
     margin: 0em 20em;
   }
 
-  /*********** Secure Location *********/
-  .sl {
+  /*********** Hero Section *********/
+  .hero {
     position: relative;
     background: url('./assets/images/background/bg-curvy-mobile.svg') no-repeat
         left top,
@@ -533,16 +533,13 @@ footer {
     margin-right: 4em;
   }
 
-  .productivity_sub-heading_1 {
-    font-size: 1em;
-  }
-
+  .productivity_sub-heading_1,
   .productivity_sub-heading_2 {
     font-size: 1em;
   }
 
-  /*********** Team *********/
-  .team {
+  /*********** Client *********/
+  .client {
     flex-direction: row;
     padding: 1.5em 3em 0em;
     background-position: left 3em top;
@@ -554,7 +551,8 @@ footer {
     font-size: 1em;
   }
 
-  /*********** Sign-Up Form *********/
+  /*********** Contact Form *********/
+
   .contact {
     margin: 1em 18em;
     padding: 3em 2em 1em;
@@ -574,20 +572,10 @@ footer {
     width: 32em;
   }
 
-  #email-validation {
-    display: none;
-  }
-
   .contact-form .btn {
     margin-left: 2em;
     padding: 1em 2em;
     font-size: 0.9em;
-  }
-
-  #validation-message {
-    font-size: 1em;
-    text-align: left;
-    margin: 0em 8em 0em 4em;
   }
 
   /*********** Footer *********/
