@@ -118,6 +118,33 @@ nav {
   transition: width 0.3s;
 }
 
+/* .nav-link::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.2em;
+  background: var(--clr-grey);
+  transition: width 0.3s;
+} */
+
+.company-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0.2em;
+  background: var(--clr-grey);
+  transition: width 0.3s;
+  text-decoration: none;
+}
+
+.company-link:hover:link {
+  text-decoration: none;
+}
+
+.company-link:hover::after {
+  width: 100%;
+}
+
 .nav-link:hover::after {
   width: 100%;
 }
